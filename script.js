@@ -17,9 +17,9 @@ let input = document.querySelector('input');
 console.log(input);
 let baseUrl = 'https://api.rawg.io/api';
 console.log(baseUrl);
-let img = document.querySelector('.img')
+let img = document.querySelector('img')
 console.dir(img);
-let modal = document.querySelector('#modal')
+let modal = document.querySelector('.modal')
 console.log(modal)
 let button = document.querySelector('#button')
 console.log(button)
@@ -32,18 +32,18 @@ console.log(button)
 // 	e.preventDefault();
 // 	modal.style.display = 'block';
 	// let gameName = document.querySelector('.searchName');
-    // function toggleModal() {
-        // modal.classList.toggle("show-modal");
-    // }
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
     function windowOnClick(event) {
         if (event.target === modal) {
             toggleModal();
         }
     }
 
-    // img.addEventListener("click", toggleModal);
+    img.addEventListener("click", toggleModal);
     // button.addEventListener("click", toggleModal);
-    // window.addEventListener("click", windowOnClick);
+    window.addEventListener("click", windowOnClick);
 	
 
 

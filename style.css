@@ -1,5 +1,5 @@
 body {
-	background-color: white;
+	background-color: #2c2b2c;
 	color: white;
 	margin: auto 0;
 	text-align: center;
@@ -8,24 +8,49 @@ body {
 
 p {
 	color: white;
+	font-size: 20px;
 	font-family: 'Kelly Slab', cursive;
-	font-family: 'Work Sans', sans-serif;
-}
-
-#form {
-	max-height: 5rem;
-	max-width: 1000em;
-	background-color: black;
-	color: white;
-  	padding: 6px;
-  	text-align: center;
-  	font-size: 14px;
-  	margin: auto 0;
+	/*font-family: 'Work Sans', sans-serif;*/
+	margin: auto;
 }
 
 img {
-	max-height: 18rem;
+	max-height: 15rem;
 	max-width: 10rem;
+	flex: 1 0 24rem;
+    /*margin: 1rem;*/
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.header {
+	max-width: 40rem;
+	max-height: 0rem;
+	overflow: hidden;
+	background-color: #2c2b2c;
+	padding: 20px 10px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.header a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 25px;
+	border-radius: 4px;
+}
+
+.header a.active {
+	background-color: white;
+	color: black;
+}
+
+.header-left {
+	float: left;
 }
 
 .grid-container {
@@ -35,6 +60,11 @@ img {
   	grid-column-gap: 10px;
   	grid-row-gap: 15px;
   	justify-content: center;
+  	margin: auto;
+  	max-height: 100rem;
+  	max-width: 100%;
+  	background-color: white;
+  	background-image: 
 }
 
 .modal {
@@ -47,7 +77,6 @@ img {
 	opacity: 0;
 	visibility: : hidden;
 	transform: scale(1.1);
-	transition: visibility 0s linear 0.25s, opacity 0.25, transform 0.25;
 }
 
 .modal-content {
@@ -58,7 +87,8 @@ img {
 	background-color: white;
 	padding: 1rem 1.5rem;
 	width: 24rem;
-	border: 2.5rem solid black;
+	border: 0.5rem solid black;
+	background-image: 'https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg';
 }
 
 .close {
