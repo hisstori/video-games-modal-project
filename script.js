@@ -57,24 +57,25 @@ fetch(url)
 		return res.json();
 })
 	.then(res => {
-		console.log('Success', res[0].background_image)
+		console.log('Success', res[0].name)
 		// console.log('The game you selected is, ' +  + ' !')
 		img.src = res[0].background_image
 })
 	.catch(err => {
 		console.log('Nope, try again...', err)
 });
-// let unirest = req("unirest");
 
-// let req = unirest("GET", "https://rawg-video-games-database.p.rapidapi.com/developers/%7Bid%7D");
+fetch("https://rawg-video-games-database.p.rapidapi.com/games", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+		"x-rapidapi-key": "d44c1473bamsha6146e8fe55483fp1ae415jsn8eac860639ef"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.log(err);
+});
 
-// require.headers({
-// 	"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
-// 	"x-rapidapi-key": "d44c1473bamsha6146e8fe55483fp1ae415jsn8eac860639ef"
-// });
-
-// req.end(function (res) {
-// 	if (res.error) throw new E}	rror(res.error);
-
-// 	console.log(res.body);
-// });
