@@ -23,8 +23,8 @@ let modal = document.querySelector('#modal')
 console.log(modal)
 let button = document.querySelector('#button')
 console.log(button)
-let span = document.querySelector('.close')[0];
-console.log(span)
+// let span = document.querySelector('.close')[0];
+// console.log(span)
 
 // img.addEventListener('click', zoom); 
 	
@@ -32,18 +32,18 @@ console.log(span)
 // 	e.preventDefault();
 // 	modal.style.display = 'block';
 	// let gameName = document.querySelector('.searchName');
-    function toggleModal() {
-        modal.classList.toggle("show-modal");
-    }
+    // function toggleModal() {
+        // modal.classList.toggle("show-modal");
+    // }
     function windowOnClick(event) {
         if (event.target === modal) {
             toggleModal();
         }
     }
 
-    img.addEventListener("click", toggleModal);
-    button.addEventListener("click", toggleModal);
-    window.addEventListener("click", windowOnClick);
+    // img.addEventListener("click", toggleModal);
+    // button.addEventListener("click", toggleModal);
+    // window.addEventListener("click", windowOnClick);
 	
 
 

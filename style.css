@@ -13,16 +13,28 @@ p {
 }
 
 #form {
+	max-height: 5rem;
+	max-width: 1000em;
 	background-color: black;
 	color: white;
   	padding: 6px;
   	text-align: center;
   	font-size: 14px;
+  	margin: auto 0;
 }
 
 img {
 	max-height: 18rem;
 	max-width: 10rem;
+}
+
+.grid-container {
+	display: grid;
+  	grid-template-columns: 170px 170px 170px;
+  	grid-template-rows: 100px 100px 100px; 
+  	grid-column-gap: 10px;
+  	grid-row-gap: 15px;
+  	justify-content: center;
 }
 
 .modal {
