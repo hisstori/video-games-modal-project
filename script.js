@@ -11,23 +11,36 @@
 // Recreate the hamburger or modol usuer interface.
 
 
-url = 'https://api.rawg.io/api/games';
-console.dir(url);
-let input = document.querySelector('input');
+let url = 'https://api.rawg.io/api/';
+console.log(url)
+let input = document.querySelector('#input');
 console.log(input);
-let baseUrl = 'https://api.rawg.io/api';
+let baseUrl = '';
 console.log(baseUrl);
 let img = document.querySelector('img')
 console.dir(img);
 let modal = document.querySelector('.modal')
 console.log(modal)
-let button = document.querySelector('#button')
+let button = document.querySelector('#button');
 console.log(button)
+let api = 'https://api.rawg.io/api/';
+console.log(api)
+let search = 'games?';
+console.log(search)
+let apiKey = 'api_key=d44c1473bamsha6146e8fe55483fp1ae415jsn8eac860639ef';
+console.log(apiKey)
 // let span = document.querySelector('.close')[0];
 // console.log(span)
 
-// img.addEventListener('click', zoom); 
-	
+// for (let i = 0; i < .length; i++) {
+	// img.src = ''
+// }
+
+function searchBar() {
+	let url = api + input.value() + apiKey;
+}
+
+
 // function zoom(e) {
 // 	e.preventDefault();
 // 	modal.style.display = 'block';
@@ -37,6 +50,7 @@ console.log(button)
     }
     function windowOnClick(event) {
         if (event.target === modal) {
+        	event.preventDefault();
             toggleModal();
         }
     }
@@ -47,35 +61,15 @@ console.log(button)
 	
 
 
-// 	// let url = baseUrl + '' + '/'
-// 	// console.dir(url);
-// 	// console.log(url);
-
 fetch(url)
 	.then(res => {
 		console.log('Got it!', res)
 		return res.json();
 })
 	.then(res => {
-		console.log('Success', res[0].name)
-		// console.log('The game you selected is, ' +  + ' !')
-		img.src = res[0].background_image
+		console.log('Success', res)
+		// console.log('The charcater is, ' +  + ' !')
 })
 	.catch(err => {
 		console.log('Nope, try again...', err)
 });
-
-fetch("https://rawg-video-games-database.p.rapidapi.com/games", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
-		"x-rapidapi-key": "d44c1473bamsha6146e8fe55483fp1ae415jsn8eac860639ef"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.log(err);
-});
-
